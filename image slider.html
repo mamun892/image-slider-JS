@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button onclick=" prev()"> Previous</button>
+    <img src="./mamun.png" alt="" height="300px" width="300px">
+
+    <button onclick="next()"> Next</button>
+
+    <script>
+
+        var photo = [" mamun.png", "bird.webp", "tiger.webp"];
+        var img = document.querySelector("img");// find image
+        var count = 0;
+
+        function prev() {
+            count--;
+
+            if( count<0){
+                count = photo.length -1;
+                img.src =photo[ count];
+            } else{
+                img.src=photo[ count];
+            }
+          
+
+        }
+
+        function next() {
+ 
+            count++;
+
+            if( count>=photo.length){
+                count = 0;
+                img.src =photo[ count];
+            } else{
+                img.src=photo[ count];
+            }
+          
+        }
+
+
+    </script>
+
+</body>
+
+</html>
